@@ -3,17 +3,20 @@ import NumberFormat from "react-number-format";
 
 const Card = (props) => {
 
-  console.log(typeof(props.suscribers));
-
   return (
-    <div className="card">
+    <div className={`card ${props.cardActive ? "move" : ""}`}>
       <div className='card_content'>
             <div className="user_info">
-              <img src={props.pp} alt="profile picture" />
+              {/* <img src={props.pp} alt="profile picture" /> */}
+              <div className="bg_pp" 
+                style={{ 
+                  backgroundImage: `url(${props.pp})` 
+                }}>
+              </div>
               <h2 className='name_title'>{props.name}</h2>
               <span>Tiene</span>
               {/* {<p>{props.suscribers}</p>} */}
-              <NumberFormat thousandsGroupStyle="thousand"
+              <NumberFormat className="number_format" thousandsGroupStyle="thousand"
                 value={props.suscribers}
                 prefix=""
                 decimalSeparator="."
