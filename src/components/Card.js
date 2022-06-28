@@ -14,6 +14,8 @@ const Card = (props) => {
                 }}>
               </div>
               <h2 className='name_title'>{props.name}</h2>
+              <div className='user2'>
+
               <span>Tiene</span>
               {/* {<p>{props.suscribers}</p>} */}
               <NumberFormat className="number_format" thousandsGroupStyle="thousand"
@@ -27,6 +29,7 @@ const Card = (props) => {
                 decimalScale={0}
                 isNumericString={false} />
               <span>Suscriptores</span>
+              </div>
             </div>
         </div>
     </div>
